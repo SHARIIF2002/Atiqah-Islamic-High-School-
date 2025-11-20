@@ -1,194 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Students | Atika Islamic High School | أتقة الثانوية الإسلامية</title>
-<style>
-    :root {
-        --cream: #fff5e6;
-        --green: #4CAF50;
-        --orange: #FF9800;
-        --white: #ffffff;
-    }
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Students | Atiqah Islamic High School</title>
+  <style>
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: var(--cream);
-        color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
     }
-
-    /* Header */
     header {
-        background-color: var(--green);
-        color: var(--white);
-        text-align: center;
-        padding: 20px;
+      background: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
     }
-
     .logo {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: var(--orange);
-        background-color: var(--white);
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 10px;
-        margin-bottom: 10px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
     }
-
-    header h1 {
-        margin: 10px 0 5px 0;
-        font-size: 2em;
-    }
-
-    header p {
-        margin: 0;
-        font-size: 1.2em;
-    }
-
-    /* Navigation */
     nav {
-        background-color: var(--orange);
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 10px 0;
+      background: #1e5799;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
     }
-
     nav a {
-        color: var(--white);
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.1em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: 0.3s;
     }
-    nav a:hover { text-decoration: underline; }
-
-    /* Main */
+    nav a:hover, nav a.active {
+      background: #145a86;
+    }
     main {
-        padding: 40px 20px;
-        max-width: 1200px;
-        margin: auto;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    main h2 {
-        text-align: center;
-        color: var(--green);
-        margin-bottom: 30px;
+    h2 {
+      color: #0a3d62;
     }
-
-    .student-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 25px;
+    section {
+      margin-bottom: 25px;
+      border-left: 4px solid #0a3d62;
+      padding-left: 10px;
+      padding-right: 10px;
     }
-
-    .student-card {
-        background: var(--white);
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        text-align: center;
-        padding-bottom: 20px;
-        overflow: hidden;
-        transition: .3s ease;
+    .student-info ul, .student-resources ul, .student-life ul, .clubs ul, .academic-support ul, .islamic-growth ul, .school-rules ul, .facilities ul {
+      list-style-type: square;
+      margin-left: 20px;
     }
-
-    .student-card:hover { transform: translateY(-6px); }
-
-    .student-card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-
-    .student-card h3 {
-        color: var(--green);
-        margin: 10px 0 5px;
-    }
-
-    .student-card p {
-        margin: 0;
-        font-size: 1em;
-        color: #555;
-    }
-
-    /* Footer */
     footer {
-        background: var(--green);
-        color: var(--white);
-        text-align: center;
-        padding: 15px 0;
-        margin-top: 40px;
+      background: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 30px;
     }
-</style>
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: url('banner-placeholder.jpg') center/cover no-repeat;
+    }
+    .hero-text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .download-btn {
+      display: inline-block;
+      background: #0a3d62;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+      }
+      nav a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+      }
+      main {
+        margin: 10px;
+        padding: 15px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+      footer p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-    <div class="logo">AIHS</div>
-    <h1>Atika Islamic High School</h1>
-    <p>أتقة الثانوية الإسلامية</p>
-</header>
-
-<nav>
+  <header>
+    <img src="logo.png" alt="School Logo" class="logo" />
+    <h1>Atiqah Islamic High School</h1>
+    <p>أتيكا الثانوية الإسلامية</p>
+  </header>
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="students.html">Students</a>
+    <a href="students.html" class="active">Students</a>
     <a href="activities.html">Activities</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
+  <main>
+    <section class="hero-banner">
+      <div class="hero-text">
+        <h2>Welcome to Atiqah Islamic High School</h2>
+        <p>Knowledge • Discipline • Faith</p>
+      </div>
+    </section><section class="student-life">
+  <h3><img src="icons/life.png" class="section-icon" /> Student Life</h3>
+  <p>Students enjoy a nurturing environment that combines Islamic teachings with academic excellence.</p>
+</section>
 
-<main>
-    <h2>Our Students</h2>
+<section class="clubs">
+  <h3><img src="icons/clubs.png" class="section-icon" /> Clubs & Student Organizations</h3>
+  <p>Various clubs help students develop leadership and talents, such as debate, sports, and environmental clubs.</p>
+</section>
 
-    <div class="student-grid">
+<section class="academic-support">
+  <h3><img src="icons/support.png" class="section-icon" /> Academic Support</h3>
+  <p>Evening revisions, remedial classes, and study groups ensure academic excellence.</p>
+</section>
 
-        <div class="student-card">
-            <img src="media/student1.jpg" alt="Student">
-            <h3>Fatimah Namusoke</h3>
-            <p>S.1 - Science Class</p>
-        </div>
+<section class="islamic-growth">
+  <h3><img src="icons/islamic.png" class="section-icon" /> Islamic Growth & Spiritual Development</h3>
+  <p>Daily Qur'an recitation, Hadith lessons, Halaqah groups, and weekly Tafsir classes nurture faith and morals.</p>
+</section>
 
-        <div class="student-card">
-            <img src="36.jpg" alt="Student">
-            <h3>Abdul Malik Ssali</h3>
-            <p>S.2 - Arts Class</p>
-        </div>
+<section class="school-rules">
+  <h3><img src="icons/rules.png" class="section-icon" /> Important School Rules</h3>
+  <p>Students must maintain discipline, respect, cleanliness, punctuality, and proper uniform at all times.</p>
+</section>
 
-        <div class="student-card">
-            <img src="35.jpg" alt="Student">
-            <h3>Sharifah Aisha K.</h3>
-            <p>S.3 - Science Class</p>
-        </div>
+<section class="facilities">
+  <h3><img src="icons/facilities.png" class="section-icon" /> School Facilities</h3>
+  <p>Classrooms, labs, mosque, playground, library, and reading spaces support student development.</p>
+</section>
 
-        <div class="student-card">
-            <img src="36.jpg" alt="Student">
-            <h3>Ahmed Ibrahim</h3>
-            <p>S.4 - Arts Class</p>
-        </div>
+<section class="handbook">
+  <h3><img src="icons/book.png" class="section-icon" /> Student Handbook</h3>
+  <p>You can download the full student handbook containing rules, guidelines, and school expectations.</p>
+  <a href="handbook.pdf" class="download-btn">Download Handbook</a>
+</section>
 
-        <div class="student-card">
-            <img src="36.jpg" alt="Student">
-            <h3>Maryam Nabirye</h3>
-            <p>S.5 - Science Class</p>
-        </div>
+<section class="islamic-content">
+  <h3><img src="icons/quran.png" class="section-icon" /> Islamic Values & Guidance</h3>
+  <p>“Seek knowledge from the cradle to the grave” — Prophet Muhammad (SAW)</p>
+  <ul>
+    <li>Morning Qur'an recitation</li>
+    <li>Daily Hadith reminders</li>
+    <li>Weekly Tafsir sessions</li>
+    <li>Islamic morals and manners training</li>
+    <li>Student-led Halaqah groups</li>
+  </ul>
+</section>
 
-        <div class="student-card">
-            <img src="36.jpg" alt="Student">
-            <h3>Juma Abubakar</h3>
-            <p>S.6 - Arts Class</p>
-        </div>
-
-    </div>
-</main>
-
-<footer>
-    <p>Contact: 755 965926 | Jinja City</p>
-    <p>&copy; 2025 Atika Islamic High School | أتيكا الثانوية الإسلامية</p>
-</footer>
-
+  </main>
+  <footer>
+    <p>Contact: 755 965926 | Location: Jinja City</p>
+    <p>&copy; 2025 Atiqah Islamic High School | أتيكا الثانوية الإسلامية</p>
+  </footer>
 </body>
-                </html>
-
+                  </html>
